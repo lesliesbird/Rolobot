@@ -1,0 +1,4 @@
+gccv -c rolobot.c
+gccv rolobot.o socket_connect.o match.o -o rolobot
+protect rolobot rwed
+

@@ -1,0 +1,33 @@
+# Project: Wrolobot
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = match.o wrolobot.o $(RES)
+LINKOBJ  = match.o wrolobot.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" -lwsock32  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = Wrolobot.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Wrolobot.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "Wrolobot.exe" $(LIBS)
+
+match.o: match.c
+	$(CC) -c match.c -o match.o $(CFLAGS)
+
+wrolobot.o: wrolobot.c
+	$(CC) -c wrolobot.c -o wrolobot.o $(CFLAGS)
