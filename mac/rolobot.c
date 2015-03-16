@@ -564,7 +564,7 @@ if ((match(myin, "bot", 1) > 0) || (match(myin, "robot", 1) > 0))
                 }
 
 
-}                 
+                 
 /* Robot doesn't understand what to do */
 if (paged == 1)
 {
@@ -577,6 +577,7 @@ else
           botput (sot);
           }
 return 0;
+}
 }
 /* Easy output with newline included*/
 
